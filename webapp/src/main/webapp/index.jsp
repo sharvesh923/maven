@@ -1,69 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <style>
-    /* Define the background style */
-    body {
-      background: black;
-      color: limegreen;
-      font-family: 'Courier New', Courier, monospace;
-      overflow: hidden;
-    }
-    /* Add live numbers to the background */
-    .numbers {
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      font-size: 10px;
-      text-align: center;
-      animation: numbers 15s linear infinite;
-    }
-    /* Define the animation for the numbers */
-    @keyframes numbers {
-      0% {
-        transform: translateY(0%);
+  <head>
+    <style>
+      /* Define the animation keyframes */
+      @keyframes nameRain {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        5% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        25% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        30% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
       }
-      100% {
-        transform: translateY(100%);
+      
+      /* Apply the animation to the element */
+      #name {
+        animation: nameRain 15s linear infinite;
+        font-size: 72px;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #ff1177;
+        font-family: 'Sans-serif';
+        text-transform: uppercase;
+        text-shadow: 2px 2px 2px #000;
       }
-    }
-    /* Add your name to the background */
-    #name {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 72px;
-      text-align: center;
-      animation: name 5s linear infinite;
-    }
-    /* Define the animation for your name */
-    @keyframes name {
-      0% {
-        transform: translateY(0%);
-      }
-      100% {
-        transform: translateY(100%);
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Add the numbers to the background -->
- <div class="numbers">
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
-    <br>
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
-    <br>
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
-    <br>
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
-    <br>
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
-  </div>
-  <!-- Add your name to the background -->
-  <h1 id="name">sharvesh</h1>
-</body>
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="name">sharvesh</h1>
+    </div>
+  </body>
 </html>
