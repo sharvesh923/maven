@@ -3,26 +3,30 @@
   <head>
     <style>
       /* Define the animation keyframes */
-      @keyframes fadeInOut {
-        0% { opacity: 0; }
-        50% { opacity: 1; }
-        100% { opacity: 0; }
+      @keyframes fillScreen {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100%); }
       }
       
       /* Apply the animation to the element */
-      #name {
-        animation: fadeInOut 2s linear infinite;
+      #text {
+        animation: fillScreen 20s linear infinite;
+        font-size: 72px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color:white;
+        z-index: -1;
       }
     </style>
   </head>
   <body>
-    <h1 id="name">sharvesh</h1>
-    <script>
-      // Get the element by its ID
-      var name = document.getElementById("name");
-      
-      // Update the text content with your name
-      name.textContent = "sharvesh";
-    </script>
+    <div id="text">
+    Sharvesh R
+    </div>
   </body>
 </html>
