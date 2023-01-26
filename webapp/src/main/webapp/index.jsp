@@ -11,7 +11,7 @@
           text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;
         }
       }
-      
+
       /* Apply the animation to the element */
       #name {
         animation: neon 1s ease-in-out infinite alternate;
@@ -30,6 +30,8 @@
     </style>
   </head>
   <body>
+    <h1 id="name">Hello every one </h1>
+    <h1 id="name">This is </h1>
     <h1 id="name">sharvesh</h1>
   </body>
 </html>
