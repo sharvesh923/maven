@@ -19,7 +19,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        color:white;
+        color:black;
         z-index: -1;
       }
     </style>
