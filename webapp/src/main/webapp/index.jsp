@@ -3,33 +3,35 @@
   <head>
     <style>
       /* Define the animation keyframes */
-      @keyframes rainfall {
-        0% { transform: translateY(-100%); }
-        100% { transform: translateY(100%); }
+      @keyframes fadeInOut {
+        0% { opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { opacity: 0; }
       }
       
       /* Apply the animation to the element */
       #name {
-        animation: rainfall 20s linear infinite;
-        font-size: 48px;
+        animation: fadeInOut 2s linear infinite;
+        font-size: 72px;
+        text-align: center;
+        width: 100%;
+        margin: 0;
         position: absolute;
-        top: -50px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
+        transform: translate(-50%, -50%);
       }
     </style>
   </head>
   <body>
-    <div>
-      <span id="name">Sharvesh</span>
-    </div>
+    <h1 id="name">sharvesh</h1>
     <script>
       // Get the element by its ID
       var name = document.getElementById("name");
       
       // Update the text content with your name
-      name.textContent = "Sharvesh";
+      name.textContent = "sharvesh";
     </script>
   </body>
 </html>
